@@ -19,6 +19,11 @@
 	</properties>
 	<dependencies>
 
+		<dependency>
+			<groupId>com.see.cloud</groupId>
+			<artifactId>eva-facade-sys</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 	<build>

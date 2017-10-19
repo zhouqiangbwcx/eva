@@ -10,8 +10,8 @@
 
 	<modules>
 		<module>eva-eureka</module>
-		<module>eva-common</module>
-		<module>eva-consumer-parent</module>
+		<module>eva-common-parent</module>
+		<module>eva-web-parent</module>
 		<module>eva-facade-parent</module>
 		<module>eva-provider-parent</module>
 	</modules>

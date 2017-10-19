@@ -25,7 +25,7 @@
 
 		<dependency>
 			<groupId>com.see.cloud</groupId>
-			<artifactId>eva-common</artifactId>
+			<artifactId>eva-common-provider</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

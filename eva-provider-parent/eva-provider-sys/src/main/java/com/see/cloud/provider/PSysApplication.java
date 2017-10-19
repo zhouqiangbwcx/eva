@@ -1,4 +1,4 @@
-package com.see.cloud;
+package com.see.cloud.provider;
 
 import org.apache.log4j.Logger;
 import org.mybatis.spring.annotation.MapperScan;

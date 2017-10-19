@@ -2,7 +2,7 @@ server:
   port: 7900
 spring:
   application:
-    name: provider-sys
+    name: eva-provider-sys
   redis:
     host: 119.23.149.69
     port: 6379

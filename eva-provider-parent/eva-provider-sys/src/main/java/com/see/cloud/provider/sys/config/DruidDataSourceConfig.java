@@ -31,13 +31,14 @@ public class DruidDataSourceConfig implements EnvironmentAware {
 
 	private RelaxedPropertyResolver propertyResolver;
 
+	@Override
 	public void setEnvironment(Environment env) {
 		this.propertyResolver = new RelaxedPropertyResolver(env, "spring.datasource.");
 	}
 
 	@Bean
 	public DataSource dataSource() {
-		
+
 		DruidDataSource datasource = new DruidDataSource();
 		datasource.setUrl(propertyResolver.getProperty("url"));
 		datasource.setDriverClassName(propertyResolver.getProperty("driver-class-name"));
@@ -94,7 +95,6 @@ public class DruidDataSourceConfig implements EnvironmentAware {
 		BeanNameAutoProxyCreator beanNameAutoProxyCreator = new BeanNameAutoProxyCreator();
 		beanNameAutoProxyCreator.setProxyTargetClass(true);
 		// 设置要监控的bean的id
-		// beanNameAutoProxyCreator.setBeanNames("sysRoleMapper","loginController");
 		beanNameAutoProxyCreator.setInterceptorNames("druid-stat-interceptor");
 		return beanNameAutoProxyCreator;
 	}

@@ -17,6 +17,15 @@
 		<module>eva-facade-sys</module>
 	</modules>
 
+	<dependencies>
+
+		<dependency>
+			<groupId>com.see.cloud</groupId>
+			<artifactId>eva-common-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+	</dependencies>
 
 
 	<properties>
