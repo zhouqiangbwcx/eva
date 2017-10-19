@@ -8,7 +8,7 @@
 
 	<parent>
 		<groupId>com.see.cloud</groupId>
-		<artifactId>eva-consumer-parent</artifactId>
+		<artifactId>eva-provider-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

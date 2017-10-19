@@ -1,0 +1,54 @@
+server:
+  port: 7900
+spring:
+  application:
+    name: provider-sys
+  redis:
+    host: 119.23.149.69
+    port: 6379
+    password: test123
+    pool:
+      max-active: 100
+      max-idle: 100
+      min-idle: 0
+      max-wait: 1000
+    timeout: 20
+  datasource:
+    name: era
+    url: jdbc:mysql://192.168.1.122:3506/lx?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 3000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    spring.datasource.filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    debug: true
+mybatis:
+  mapperLocations: classpath*:/mapper/**/*Mapper.xml
+logging:
+  config: classpath:config/logback-spring.xml
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:7801/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      zone: ABC
+      lilizhou: BBC
+    lease-renewal-interval-in-seconds: 5
