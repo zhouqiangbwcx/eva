@@ -12,8 +12,8 @@ import com.see.cloud.web.facade.sys.vo.SysUserVO;
 
 @Controller
 public class TemplateController {
-	@Autowired
-	private RestTemplate restTemplate;
+/*	@Autowired
+	private RestTemplate restTemplate;*/
 	@Autowired
 	private SysUserFacade sysUserFacade;
 
@@ -30,11 +30,11 @@ public class TemplateController {
 		return "/helloHtml";
 	}
 
-	@RequestMapping("/helloHtmlus")
+/*	@RequestMapping("/helloHtmlus")
 	public String helloHtmlus(Map<String, Object> map) {
 		SysUserVO u = this.restTemplate.getForObject("http://PROVIDER-SYS/sysUse/getUserByid/1", SysUserVO.class);
 		map.put("hello", u);
 		return "/helloHtml";
 	}
-
+*/
 }

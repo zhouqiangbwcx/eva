@@ -33,3 +33,11 @@ eureka:
       zone: ABC
       lilizhou: BBC
     lease-renewal-interval-in-seconds: 5
+feign:
+  compression:
+    request:
+      enabled: false
+      mime-types: text/xml;application/xml;application/json
+      min-request-size: 2048
+    response:
+      enabled: true
