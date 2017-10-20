@@ -75,7 +75,7 @@ public class RedisSessionDao extends AbstractSessionDAO {
 		try {
 			session = (Session) deserialize(jedisClient.get(sessionId.toString()));
 		} catch (Exception e) {
-			log.error(e.getMessage());
+			log.error("ccccccccccccccccccccccccccccccc"+e.getMessage());
 		}
 		return session;
 	}

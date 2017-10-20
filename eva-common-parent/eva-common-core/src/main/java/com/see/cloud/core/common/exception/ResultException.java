@@ -21,7 +21,7 @@ public class ResultException extends RuntimeException {
 	public ResultException() {
 	}
 
-	public ResultException(ResultBody<?> resultBody) {
+	public ResultException(ResultBody resultBody) {
 		super(resultBody.getMsg());
 		this.state = resultBody.getCode();
 		this.state = resultBody.getMsg();

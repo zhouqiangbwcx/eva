@@ -22,7 +22,7 @@ public class ExceptionHandlerAdvice {
 
 	@ExceptionHandler(value = Exception.class)
 	@ResponseBody
-	public ResultBody<?> handle(Exception e) {
+	public ResultBody handle(Exception e) {
 		logger.error("统一异常 start");
 		logger.error(e);
 		e.printStackTrace();

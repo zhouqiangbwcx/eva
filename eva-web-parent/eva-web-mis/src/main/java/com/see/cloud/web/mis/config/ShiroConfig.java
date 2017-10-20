@@ -110,7 +110,7 @@ public class ShiroConfig {
 		manager.setDeleteInvalidSessions(true);
 		manager.setGlobalSessionTimeout(redisSessionDao.getExpireTime());
 		manager.setSessionValidationSchedulerEnabled(true);
-		manager.setSessionValidationInterval(60000);
+		manager.setSessionValidationInterval(1800000);
 		return manager;
 	}
 	/*

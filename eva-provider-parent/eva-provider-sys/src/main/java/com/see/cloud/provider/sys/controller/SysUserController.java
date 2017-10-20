@@ -20,7 +20,7 @@ public class SysUserController {
 	private ISysUser sysUserImpl;
 
 	@GetMapping("/getUserByid/{id}")
-	public ResultBody<SysUserVO> getUserByid(@PathVariable Integer id) {
+	public ResultBody getUserByid(@PathVariable Integer id) {
 		SysUser sysUser = sysUserImpl.getByPrimaryKey(id);
 		SysUserVO record = JSON.parseObject(JSON.toJSONString(sysUser), SysUserVO.class);
 

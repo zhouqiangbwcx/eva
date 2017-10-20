@@ -4,16 +4,16 @@ server:
     port-header: HEAD,PUT,DELETE,OPTIONS,TRACE,COPY,SEARCH,PROPFIND
 spring:
   application:
-    name: eva-consumer-mis
+    name: eva-web-mis
   redis:
     host: 119.23.149.69
     port: 6379
     password: test123
     pool:
-      max-active: 100
+      max-active: 300
       max-idle: 100
       min-idle: 1
-      max-wait: 1000
+      max-wait: 10000
     timeout: 20
   thymeleaf:
     cache: false

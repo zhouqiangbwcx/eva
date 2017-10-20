@@ -6,7 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -17,7 +17,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 
 @SpringBootApplication
 @EnableTransactionManagement // 如果mybatis中service实现类中加入事务注解，需要此处添加该注解
-@EnableEurekaClient // 启动EnableEureka客户端
+@EnableDiscoveryClient // 启动EnableEureka客户端
 @MapperScan("com.see.cloud.provider.sys.mapper")
 public class PSysApplication implements CommandLineRunner {
 

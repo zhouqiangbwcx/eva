@@ -2,11 +2,11 @@ package com.see.cloud.core.common.entitys;
 
 import com.see.cloud.core.common.enums.ResultCode;
 
-public class ResultBody<T> {
+public class ResultBody {
 
 	private String code;
 	private String msg;
-	private T data;
+	private Object data;
 
 	public String getCode() {
 		return code;
@@ -24,11 +24,11 @@ public class ResultBody<T> {
 		this.msg = msg;
 	}
 
-	public T getData() {
+	public Object getData() {
 		return data;
 	}
 
-	public void setData(T data) {
+	public void setData(Object data) {
 		this.data = data;
 	}
 
@@ -37,7 +37,7 @@ public class ResultBody<T> {
 		this.msg = errorEnum.getMsg();
 	}
 
-	public ResultBody(String code, String msg, T data) {
+	public ResultBody(String code, String msg, Object data) {
 		this.code = code;
 		this.msg = msg;
 		this.data = data;

@@ -22,15 +22,15 @@ public class ExceptionHandlerAdvice {
 
 	@ExceptionHandler(value = Exception.class)
 	@ResponseBody
-	public ResultBody<?> handle(Exception e) {
-		logger.error("统一异常 start"+e.toString());
+	public ResultBody handle(Exception e) {
+		logger.error("统一异常 start" + e.toString());
 		logger.error(e);
 		e.printStackTrace();
 		if (e instanceof ResultException) {
 			ResultException liuluException = (ResultException) e;
 			return ResultUtils.warn(liuluException.getState(), liuluException.getMessage(), liuluException.getData());
 		}
-		logger.error("统一异常 end"+e.getMessage());
-		return ResultUtils.warn(ResultCode.EXCEPTION,e.getMessage());
+		logger.error("统一异常 end" + e.getMessage());
+		return ResultUtils.warn(ResultCode.EXCEPTION, e.getMessage());
 	}
 }

@@ -1,6 +1,5 @@
 package com.see.cloud.core.common.utils;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.see.cloud.core.common.entitys.ResultBody;
 import com.see.cloud.core.common.enums.ResultCode;
@@ -14,7 +13,7 @@ public class ResultUtils {
 	}
 
 	public static ResultBody warn(ResultCode resultCode, String msg) {
-		ResultBody<Object> result = new ResultBody<>(resultCode);
+		ResultBody result = new ResultBody(resultCode);
 		result.setMsg(msg);
 		return result;
 	}
